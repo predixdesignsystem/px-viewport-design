@@ -1,6 +1,6 @@
 # Viewport
 
-Default viewport parameters for Predix Experience.
+Default viewport parameters for Predix UI components.
 
 
 ## Upstream dependency
@@ -13,7 +13,7 @@ The Viewport module is an upstream dependency in this meta kit:
 
 Install this module and its dependencies using bower:
 
-    bower install --save https://github.com/PredixDev/px-viewport-design.git
+    bower install --save px-viewport-design
 
 Once installed, `@import` into your project's Sass file in its Base layer:
 
@@ -63,3 +63,5 @@ This variable is overridden in px-theme.
 **Description:** Set this to the desired value of margin-left and margin-right for viewport.
 This variable is overridden in px-theme.
 <br/><br/>
+
+Please view the full API [here](http://predixdev.github.io/px-viewport-design/sassdoc/#variable-breakpoints)

@@ -1,3 +1,7 @@
+v0.4.5
+==============================
+* updated oss notice and readme to point to gh-pages.
+
 v0.4.4
 ==============================
 * Moved variables above breakpoints fix bug
