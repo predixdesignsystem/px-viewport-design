@@ -2,7 +2,6 @@
 
 Default viewport parameters for Predix UI components.
 
-
 ## Upstream dependency
 
 The Viewport module is an upstream dependency in this meta kit:
@@ -15,7 +14,7 @@ Install this module and its dependencies using bower:
 
     bower install --save px-viewport-design
 
-Once installed, `@import` into your project's Sass file in its Base layer:
+Once installed, `@import` into your project's Sass file in its **Base** layer:
 
     @import "px-viewport-design/_base.viewport.scss";
 
@@ -64,4 +63,4 @@ This variable is overridden in px-theme.
 This variable is overridden in px-theme.
 <br/><br/>
 
-Please view the full API [here](http://predixdev.github.io/px-viewport-design/sassdoc/#variable-breakpoints)
+view the full API [here](http://predixdev.github.io/px-viewport-design/sassdoc/)
