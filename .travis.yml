@@ -13,7 +13,10 @@ before_script:
 script:
 - cd $TRAVIS_BUILD_DIR/scripts
 - chmod 755 ghp.sh
-- ./ghp.sh
+- "./ghp.sh"
 before_install:
 - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then openssl aes-256-cbc -k "$password"
   -in id_rsa.enc -out deploy_key -d; fi
+env:
+  global:
+    secure: VzjrphxUEFa3d5wqdDctklf9GyNYODZHfUHdM/Vh6AWYN9NqT1JeVjgBvIWY9gBtZc6SZNMUIvsrVZFPYi+C/eXg/Yrfar2YWfE+FUViJ04mKZ1wfvGY+DGtKOZ06rY+6VMDBIs+9Oy9d93gJdVNRnk0FPAJT5VaXIDXD3PsT+ABiAB1zRarzVGkYv9z08MDfZaZB7NB1vj1VeM2x65AlKgFJBg3NaYiPTjSx+k5eekmOT4Hw9gJ4qNc4zY3jy9DHo6lc+P1BP7RbBD6Y7VKKnfe1l3qmL7zS4muZqk8Z0LkouDHxudQQniKoSOAj1rWbNEU5MbN9Ywjd/as4wUw6JicNa3jlIXzy/MpljNtekKB4u+m3jaqHJSCxdV+6oP/DwZ5VgHncH3WDxWYFA2ZjXLMz+jw6N2r8ZQ0S4ZuVzkV9oByvb7eq3bS+wKt8QFhZG+6JjOdLtvgplBm98NlcY6ylHmF1RoKdlnlyfg2cPVqbbRzqc8XkgJXQhvpK8D+82Mlb6y3U9MnU4n4godIrZC7qn2Zd+i/K/8RVMnocSO4876XzfAEdSm+FPG9rL8NiqFQmyt7xIMFoKbdCimLEPqUbolg+lV+AchCNCnG0wCsYOPftsyaqN194hZPWICZlUzdGM/vMS5fGVmG2ePJHpYcCR8gyZK7eVnHbkJfv6w=
