@@ -45,13 +45,8 @@ function buildCSS(){
 }
 
 gulp.task('sass', function() {
-  return gulp.src(['./sass/*.scss', '!./sass/*sketch.scss', '!./sass/*-demo.scss'])
+  return gulp.src(['./sass/*.scss'])
     .pipe(buildCSS())
-    .pipe(gulpif(/.*predix/,
-      $.rename(function(path){
-        path.basename = new RegExp('.+?(?=\-predix)').exec(path.basename)[0];
-      })
-    ))
     .pipe(stylemod({
       moduleId: function(file) {
         return path.basename(file.path, path.extname(file.path)) + '-styles';
@@ -61,16 +56,23 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream({match: 'css/*.html'}));
 });
 
-gulp.task('demosass', function() {
-  return gulp.src(['./sass/*-demo.scss'])
-    .pipe(buildCSS())
-    .pipe(gulp.dest('css'))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+gulp.task('watch', function() {
+  gulp.watch(['sass/*.scss'], ['sass']);
 });
 
-gulp.task('watch', function() {
-  gulp.watch(['!sass/*-demo.scss', 'sass/*.scss'], ['sass']);
-  gulp.watch('sass/*-demo.scss', ['demosass']);
+gulp.task('serve', function() {
+  browserSync.init({
+    port: 8080,
+    notify: false,
+    reloadOnRestart: true,
+    logPrefix: `${pkg.name}`,
+    https: false,
+    server: ['./', 'bower_components'],
+  });
+
+  gulp.watch(['css/*-styles.html', '*.html', '*.js', 'demo/*.html']).on('change', browserSync.reload);
+  gulp.watch(['sass/*.scss'], ['sass']);
+  
 });
 
 gulp.task('serve', function() {

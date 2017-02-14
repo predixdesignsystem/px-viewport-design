@@ -1,3 +1,7 @@
+v0.4.14
+==================
+* updated new demo using px-demo classes
+
 v0.4.13
 ==================
 * changing ghp.sh to account for Alpha releases
@@ -15,7 +19,6 @@ v0.4.11
 v0.4.10
 ==================
 * bumping all version of px-sass-doc to get px-clipboard update
-
 
 v0.4.9
 ==================
