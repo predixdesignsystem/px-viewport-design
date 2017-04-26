@@ -1,3 +1,7 @@
+v1.0.0
+==================
+* Bump to pick up design repo dependencies
+
 v0.4.14
 ==================
 * updated new demo using px-demo classes
@@ -10,11 +14,9 @@ v0.4.12
 ==================
 * Updated dependencies
 
-
 v0.4.11
 ==================
 * bumping sassdoc to propogate clipboard changes
-
 
 v0.4.10
 ==================
