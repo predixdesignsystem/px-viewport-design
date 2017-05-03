@@ -10,9 +10,9 @@ const browserSync = require('browser-sync').create();
 const gulpif = require('gulp-if');
 const combiner = require('stream-combiner2');
 const bump = require('gulp-bump');
+const argv = require('yargs').argv;
 const sassdoc = require('sassdoc');
 const fs = require('fs');
-const argv = require('yargs').argv;
 
 const sassOptions = {
   importer: importOnce,
@@ -73,22 +73,6 @@ gulp.task('serve', function() {
 
   gulp.watch(['css/*-styles.html', '*.html', '*.js', 'demo/*.html']).on('change', browserSync.reload);
   gulp.watch(['*.scss', 'sass/*.scss'], ['sass']);
-  
-});
-
-gulp.task('serve', function() {
-  browserSync.init({
-    port: 8080,
-    notify: false,
-    reloadOnRestart: true,
-    logPrefix: `${pkg.name}`,
-    https: false,
-    server: ['./', 'bower_components'],
-  });
-
-  gulp.watch(['css/*-styles.html', 'css/*-demo.css', '*.html', '*.js']).on('change', browserSync.reload);
-  gulp.watch(['sass/*.scss', '!sass/*-demo.scss'], ['sass']);
-  gulp.watch('sass/*-demo.scss', ['demosass']);
 
 });
 
@@ -111,7 +95,7 @@ gulp.task('bump:major', function(){
 });
 
 gulp.task('default', function(callback) {
-  gulpSequence('clean', 'sass', 'demosass')(callback);
+  gulpSequence('clean', 'sass')(callback);
 });
 
 /**
@@ -119,9 +103,9 @@ gulp.task('default', function(callback) {
 * spits it out as `sassdoc.json`.
 */
 gulp.task('sassdoc', function(){
-  gulp.src(['./*.scss'])
-    .pipe(sassdoc.parse())
-    .on('data', function(data){
-      fs.writeFileSync('sassdoc.json', JSON.stringify(data,null,4));
-    });
+  gulp.src(['./*.scss'])
+    .pipe(sassdoc.parse())
+    .on('data', function(data){
+      fs.writeFileSync('sassdoc.json', JSON.stringify(data,null,4));
+    });
 });
