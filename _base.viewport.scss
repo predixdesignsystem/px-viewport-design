@@ -4,6 +4,9 @@
 /// @group px-viewport-design
 ////
 
+@import "inuit-responsive-tools/_tools.responsive.scss";
+
+
 /// Set this to the desired width of the "page" element, div.viewport. Will be inserted as the widest breakpoint for the responsive mixin. This variable is overridden in px-theme.
 ///
 /// @group px-viewport-design:variables:style
