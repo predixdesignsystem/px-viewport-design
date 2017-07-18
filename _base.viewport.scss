@@ -4,30 +4,33 @@
 /// @group px-viewport-design
 ////
 
-@import "inuit-responsive-settings/_settings.responsive.scss";
-@import "inuit-responsive-tools/_tools.responsive.scss";
-
 
 /// Set this to the desired width of the "page" element, div.viewport. Will be inserted as the widest breakpoint for the responsive mixin. This variable is overridden in px-theme.
 ///
 /// @group px-viewport-design:variables:style
 /// @type Number [default] - Viewport width
+/// @todo n/a
 $desk-wide-width    : 100% !default;
 
 /// Set this to the desired value of widest possible viewport width. Will be inserted as the widest breakpoint for the responsive mixin. This variable is overridden in px-theme.
 ///
 /// @group px-viewport-design:variables:style
 /// @type Number [default] - Widest viewport
+/// @todo n/a
 $desk-wide-max-width: 80rem !default;
 
 /// Set this to the desired value of margin-left and margin-right for viewport. This variable is overridden in px-theme.
 ///
 /// @group px-viewport-design:variables:style
 /// @type Number [default] - Left and Right margin on viewport
+/// @todo n/a
 $viewport-margin    : auto !default;
 
-
+/// List of breakpoints used within this module.
+///
+/// @group px-viewport-design:variables:style
 /// @type List | String - Array of different breakpoints
+/// @todo n/a
 $breakpoints: (
     "palm"          "screen and (max-width: 47.9rem)",
     "lap"           "screen and (min-width: 48rem) and (max-width: 63.9rem)",
