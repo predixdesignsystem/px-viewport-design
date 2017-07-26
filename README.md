@@ -1,10 +1,10 @@
-# Viewport
+# px-viewport-design
 
-Default viewport parameters for Predix UI components.
+The Predix UI Viewport module provides default viewport parameters for Predix UI components.
 
-## Upstream dependency
+## Upstream dependencies
 
-The Viewport module is an upstream dependency in this meta kit:
+The `px-viewport-design` module is an upstream dependency in this meta kit:
 
 * [px-starter-kit-design](https://github.com/PredixDev/px-starter-kit-design)
 
@@ -63,4 +63,4 @@ This variable is overridden in px-theme.
 This variable is overridden in px-theme.
 <br/><br/>
 
-view the full API [here](http://predixdev.github.io/px-viewport-design/sassdoc/)
+View the full API [here](http://predixdev.github.io/px-viewport-design/sassdoc/).
