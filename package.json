@@ -1,6 +1,6 @@
 {
     "name": "px-viewport-design",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Viewport parameters for Predix Experience",
     "private": false,
     "scripts": {
