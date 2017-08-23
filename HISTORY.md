@@ -1,3 +1,7 @@
+v1.0.2
+==================
+* add breakpoints to match helpers-design
+
 v1.0.1
 ==================
 * runtime theming for demo

@@ -24,14 +24,12 @@
 <section data-slot="usage">
 ```
 <!-- Array of different breakpoints -->
-$breakpoints
-  palm          screen and max-width: 47.9rem
-  lap           screen and min-width: 48rem and max-width: 63.9rem
-  lap-and-up    screen and min-width: 48rem
-  portable      screen and max-width: 63.9rem
-  desk          screen and min-width: 63.9rem
-  desk-wide     screen and min-width: $desk-wide-width
-  retina        -webkit-min-device-pixel-ratio: 2, min-resolution: 192dpi, min-resolution: 2dppx
+Default recommended $breakpoints
+  palm             screen and (max-width: 47.9em),
+  lap-and-up       screen and (min-width: 48em),
+  desk-and-up      screen and (min-width: 64em),
+  large-and-up     screen and (min-width: 120em),
+  retina           (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
 
 
 <!-- Viewport -->
