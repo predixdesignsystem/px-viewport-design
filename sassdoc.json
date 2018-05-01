@@ -1,9 +1,9 @@
 [
     {
-        "description": "Set this to the desired width of the \"page\" element, div.viewport. Will be inserted as the widest breakpoint for the responsive mixin. This variable is overridden in px-theme.\n\n",
+        "description": "Set this to the desired width of the \"page\" element, div.viewport. Will be inserted as the widest breakpoint for the responsive mixin.\n\n",
         "commentRange": {
-            "start": 8,
-            "end": 12
+            "start": 24,
+            "end": 28
         },
         "context": {
             "type": "variable",
@@ -11,8 +11,8 @@
             "value": "100%",
             "scope": "default",
             "line": {
-                "start": 13,
-                "end": 13
+                "start": 29,
+                "end": 29
             }
         },
         "group": [
@@ -29,10 +29,10 @@
         }
     },
     {
-        "description": "Set this to the desired value of widest possible viewport width. Will be inserted as the widest breakpoint for the responsive mixin. This variable is overridden in px-theme.\n\n",
+        "description": "Set this to the desired value of widest possible viewport width. Will be inserted as the widest breakpoint for the responsive mixin.\n\n",
         "commentRange": {
-            "start": 15,
-            "end": 19
+            "start": 31,
+            "end": 35
         },
         "context": {
             "type": "variable",
@@ -40,8 +40,8 @@
             "value": "80rem",
             "scope": "default",
             "line": {
-                "start": 20,
-                "end": 20
+                "start": 36,
+                "end": 36
             }
         },
         "group": [
@@ -58,10 +58,10 @@
         }
     },
     {
-        "description": "Set this to the desired value of margin-left and margin-right for viewport. This variable is overridden in px-theme.\n\n",
+        "description": "Set this to the desired value of margin-left and margin-right for viewport.\n\n",
         "commentRange": {
-            "start": 22,
-            "end": 26
+            "start": 38,
+            "end": 42
         },
         "context": {
             "type": "variable",
@@ -69,8 +69,8 @@
             "value": "auto",
             "scope": "default",
             "line": {
-                "start": 27,
-                "end": 27
+                "start": 43,
+                "end": 43
             }
         },
         "group": [
@@ -89,17 +89,17 @@
     {
         "description": "List of breakpoints used within this module.\n\n",
         "commentRange": {
-            "start": 29,
-            "end": 33
+            "start": 45,
+            "end": 49
         },
         "context": {
             "type": "variable",
             "name": "breakpoints",
-            "value": "(\n    \"palm\"          \"screen and (max-width: 47.9rem)\",\n    \"lap\"           \"screen and (min-width: 48rem) and (max-width: 63.9rem)\",\n    \"lap-and-up\"    \"screen and (min-width: 48rem)\",\n    \"portable\"      \"screen and (max-width: 63.9rem)\",\n    \"desk\"          \"screen and (min-width: 63.9rem)\",\n    \"desk-wide\"     \"screen and (min-width: #{$desk-wide-width})\",\n    \"retina\"        \"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)\"\n)",
+            "value": "(\n    // backwards compatibility\n    \"lap\"           \"screen and (min-width: 48rem) and (max-width: 63.9rem)\", // 720 - 960\n    \"portable\"      \"screen and (max-width: 63.9rem)\", // < 960\n    \"desk\"          \"screen and (min-width: 63.9rem)\", // > 960\n    \"desk-wide\"     \"screen and (min-width: #{$desk-wide-width})\",\n\n    // recommended\n    \"palm\"             \"screen and (max-width: 47.9em)\", // < 720\n    \"lap-and-up\"       \"screen and (min-width: 48em)\", // > 720\n    \"desk-and-up\"      \"screen and (min-width: 64em)\", // > 960\n    \"large-and-up\"     \"screen and (min-width: 120em)\", // > 1800\n    \"retina\"           \"(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)\"\n)",
             "scope": "private",
             "line": {
-                "start": 34,
-                "end": 42
+                "start": 50,
+                "end": 63
             }
         },
         "group": [
